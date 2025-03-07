@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoverItExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-h1-ngj">
+                                <rect key="frame" x="99" y="362" width="216" height="175"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZZ-6O-vT0">
+                                <rect key="frame" x="317" y="48" width="77" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="P3m-q6-6RB"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Gear"/>
+                                <connections>
+                                    <action selector="tappedSettings" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9c-sn-hqa"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5s-Xe-H3L" userLabel="needPermissionView">
+                                <rect key="frame" x="20" y="100" width="374" height="728"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trY-PB-KQa">
+                                        <rect key="frame" x="46" y="197" width="282" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">IMPORTANT:
+
+This application needs permission to access your contacts</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRa-p0-N72" userLabel="needSettingsView">
+                                <rect key="frame" x="0.0" y="100" width="414" height="726"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imo-dw-JMn">
+                                        <rect key="frame" x="84" y="60" width="246" height="259"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">WARNING:
+
+Missing Settings.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t5s-Xe-H3L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="027-yo-6fd"/>
+                            <constraint firstItem="9ZZ-6O-vT0" firstAttribute="trailing" secondItem="t5s-Xe-H3L" secondAttribute="trailing" id="7ki-3m-sCX"/>
+                            <constraint firstItem="9ZZ-6O-vT0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="317" id="DoS-Pr-MfY"/>
+                            <constraint firstItem="bRa-p0-N72" firstAttribute="top" secondItem="9ZZ-6O-vT0" secondAttribute="bottom" constant="1" id="EYp-BX-h1S"/>
+                            <constraint firstItem="9ZZ-6O-vT0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Iam-1p-bhH"/>
+                            <constraint firstItem="UW7-h1-ngj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="314" id="RtG-KE-j3z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bRa-p0-N72" secondAttribute="bottom" constant="36" id="SdY-4M-CCj"/>
+                            <constraint firstItem="UW7-h1-ngj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="UUG-56-yXw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UW7-h1-ngj" secondAttribute="bottom" constant="325" id="UeP-QB-1y7"/>
+                            <constraint firstItem="bRa-p0-N72" firstAttribute="top" secondItem="t5s-Xe-H3L" secondAttribute="top" id="ab7-8g-bXh"/>
+                            <constraint firstItem="UW7-h1-ngj" firstAttribute="centerX" secondItem="bRa-p0-N72" secondAttribute="centerX" id="bVx-xD-9co"/>
+                            <constraint firstItem="bRa-p0-N72" firstAttribute="centerX" secondItem="t5s-Xe-H3L" secondAttribute="centerX" id="dFv-nk-McR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t5s-Xe-H3L" secondAttribute="bottom" constant="34" id="esX-3p-ONm"/>
+                            <constraint firstItem="bRa-p0-N72" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hpP-ry-ySe"/>
+                            <constraint firstItem="9ZZ-6O-vT0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kad-gL-tdf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="needPermissionView" destination="t5s-Xe-H3L" id="arF-dq-P4q"/>
+                        <outlet property="needSettingsView" destination="bRa-p0-N72" id="1Mz-hT-lw0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.289855072463769" y="3.3482142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Gear" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
