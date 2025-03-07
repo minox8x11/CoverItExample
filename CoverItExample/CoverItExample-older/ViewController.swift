@@ -32,19 +32,11 @@ class ViewController: UIViewController {
         print("view did load")
             // If settings are changed...
             NotificationCenter.default.addObserver(forName: UserDefaults.didChangeNotification, object: nil, queue: OperationQueue.main) { notification in
-          // ...Do something
+                // ...Do something
                 print("didChangeNotification")
-                // Register the default values from Settings.bundle
-                if let settingsURL = Bundle.main.url(forResource: "Root", withExtension: "plist", subdirectory: "Settings.bundle"),
-                    let settingsRootDict = NSDictionary(contentsOf: settingsURL),
-                    let prefSpecifiers = settingsRootDict["PreferenceSpecifiers"] as? [NSDictionary],
-                    let keysAndValues = prefSpecifiers.map({ d in (d["Key"], d["DefaultValue"]) }) as? [(String, Any)] {
-                        UserDefaults.standard.register(defaults: Dictionary(uniqueKeysWithValues: keysAndValues))
-                }
-                
+                self.checkSettingsConfigured()
             } // [END] If settings are changed.
-    
-    } // [END] super.viewDidLoad()
+        } // [END] super.viewDidLoad()
         
         func checkSettingsConfigured() {
             let name = UserDefaults.standard.string(forKey: "name_preference")
